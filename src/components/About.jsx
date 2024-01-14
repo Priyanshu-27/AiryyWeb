@@ -14,7 +14,7 @@ const About = () => {
         >
           <div
             id="Ellipse"
-            className="w-4/6 h-[870px] bg-[linear-gradient(180deg,_#ffd600_0%,rgba(10,_10,_9,_0)_88%)] opacity-60 bg-cover bg-50%_50% bg-blend-normal bg-no-repeat absolute  left-[-84px] flex flex-col gap-24 items-start top-[9.2rem] rounded-[50%]"
+            className="w-4/6 h-[870px] bg-[linear-gradient(180deg,_#ffd600_0%,rgba(10,_10,_9,_0)_88%)] opacity-60 bg-cover bg-50%_50% bg-blend-normal bg-no-repeat absolute  left-[-84px] flex flex-col gap-24 items-start top-[7.2rem] rounded-[50%]"
           ></div>
           <div
             id="Ellipse1"

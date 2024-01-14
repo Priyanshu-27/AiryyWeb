@@ -128,8 +128,16 @@ function Footer() {
           <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
         </div>
       </div>
-
       
+      <div className="w-screen snap-start justify-between flex sm:hidden px-44 text-white">
+        <p>&copy; {currentYear} airyyrides.com</p>
+        {/* Social Links for larger screens */}
+        <div className="flex xs:hidden ss:hidden dark:text-white flex-row gap-4 h-[5rem] ">
+          <CiFacebook size={28} />
+          <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
+          <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
+        </div>
+      </div>
     </>
   );
 }

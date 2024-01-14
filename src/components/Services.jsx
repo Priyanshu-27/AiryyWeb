@@ -1,35 +1,40 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 const Services = () => {
+  const whatsappNumber = "8109475317"; 
+
+  const handleRentNowClick = () => {
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    window.location.href = whatsappLink;
+  };
   return (
     <>
-    <div
-      id="Services"
-      className="Services  snap-center xs:snap-start   z-[10]  h-screen  relative xs:w-full"
-    >
-      {/* Parent container with opacity */}
+      {/* <Fade bottom> */}
+      <div
+        id="Services"
+        className="Services  snap-center xs:snap-start   z-[10] top-5 h-screen  relative xs:w-full"
+      >
+        {/* Parent container with opacity */}
 
+        {/* Heading outside the parent container with opacity */}
+        <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-16 md:mb-0 md:col-span-3">
+          Why Choose AiRYY Rides?
+        </h1>
 
-      {/* Heading outside the parent container with opacity */}
-      <h1 className=" dark:text-white text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-20 md:mb-0 md:col-span-3">
-        Why Choose AiRYY Rides?
-      </h1>
-    
-        <div className="flex flex-row xs:flex-col gap-10 items-center justify-center mt-16 overflow-hidden xs:w-full">
+        <div className="flex flex-row xs:my-6 xs:mx-2   xs:grid xs:grid-cols-2 xs:gap-0 gap-10 items-center justify-center mt-16 overflow-hidden xs:w-full">
           {/* Box 1 */}
-          <div className="group xs:w-[200px] xs:h-[300px]  w-[250px] h-[327px]  px-[35px] py-[95px] bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] shadow flex-col justify-center items-center inline-flex transition-all duration-500">
+          <div className="group xs:w-[180px] xs:h-[250px]  w-[250px] h-[327px]  px-[35px] py-[95px] bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] shadow flex-col justify-center items-center inline-flex transition-all duration-500">
             <div className="flex-col  justify-center items-center gap-[35px] flex">
-              <div className="self-stretch font-poppins text-center text-black text-[20px] font-bold">
+              <div className="self-stretch font-poppins text-center text-black text-[20px] font-bold xs:mt-1 xs:text-[14px]">
                 24/7 Service
               </div>
-              <div className="flex-col justify-center items-center gap-[45px] flex">
-                <div className="w-[162px] font-poppins h-[73px] text-black group-hover:text-white  text-base font-normal px-3 leading-6 text-justify">
+              <div className="flex-col justify-center items-center gap-[45px] flex ">
+                <div className="w-[162px] font-poppins xs:h-[50px] h-[73px] text-black group-hover:text-white  text-base font-normal px-3 leading-6 text-justify xs:text-[11px] xs:ml-2 xs:mr-2">
                   24/7 Service: We are at your service 24/7, ensuring you can
                   embark on your adventure day or night.
                 </div>
-                <div className="px-2 py-2 bg-black rounded-md mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
-                  <a className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px]">
+                <div className="px-2 py-2 bg-black rounded-md xs:py-1 xs:mt-3 mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
+                  <a  onClick={{handleRentNowClick}} className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]">
                     Get Started Today
                   </a>
                 </div>
@@ -38,7 +43,7 @@ const Services = () => {
           </div>
 
           {/* Box 2 */}
-          <div className="group  xs:w-[200px] xs:h-[300px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
+          <div className="group  xs:w-[180px] xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
             <svg
               width="210"
               height="297"
@@ -90,28 +95,27 @@ const Services = () => {
               </g>
             </svg>
 
-            <div className="text-neutral-700 group-hover:text-black text-[20px] font-bold font-poppins">
+            <div className="text-neutral-700 group-hover:text-black text-[20px] xs:text-[14px] font-bold font-poppins">
               Budget-Friendly
             </div>
             <div className="flex-col justify-center items-center gap-[35px] flex">
-              <div className="xs:w-[220px] w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-6  leading-5 text-justify">
+              <div className="xs:w-[220px] w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-6 xs:px-10  leading-5 xs:text-[12px] text-justify">
                 Our budget-friendly choices make urban commuting affordable,
                 ensuring you enjoy the thrill of riding without straining your
                 finances.
               </div>
               <div className="px-4 py-2.5 rounded-[10px]  justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
+               
               </div>
             </div>
           </div>
 
           {/* Box 3 */}
-          <div className="group  snap-center xs:snap-start snap-mandatory xs:w-[200px] xs:h-[300px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
+          <div className="group  snap-center xs:snap-start snap-mandatory xs:w-[180px] xs:mt-4 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
             <svg
               width="210"
               height="297"
+           
               viewBox="0 0 210 297"
               version="1.1"
               id="svg1"
@@ -160,67 +164,59 @@ const Services = () => {
               </g>
             </svg>
 
-            <div className="text-neutral-700 group-hover:text-black text-[20px] font-bold font-poppins">
+            <div className="text-neutral-700 group-hover:text-black text-[20px] xs:text-[14px] font-bold font-poppins">
               Quality and Safety
             </div>
             <div className="flex-col justify-center items-center gap-[35px] flex">
-              <div className="xs:w-[220px] w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-5  leading-5 text-justify">
+              <div className=" w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-5  leading-5 text-justify xs:px-16 xs:text-[10px]">
                 Prioritizing safety, our bikes undergo regular maintenance to
                 guarantee a secure and worry-free riding experience.
               </div>
               <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
+               
               </div>
             </div>
           </div>
 
           {/* Box 4 */}
-          <div className="group xs:w-[200px] xs:h-[300px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
-            <motion.div
-             
-            >
+          <div className="group xs:w-[180px] xs:mt-6 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
+            <motion.div>
               <svg
                 width="250"
                 height="110"
-                className="relative top-2 "
+                className="relative top-2 xs:top-6"
                 viewBox="0 0 210 297"
                 version="1.1"
                 id="svg1"
-               
               >
                 <motion.path
-                
                   d="M 94.031458,217.87623 V 216.8179 H 88.6075 83.183541 v -1.05834 -1.05833 h -3.175 -3.175 v -1.05833 -1.05834 h -2.116667 -2.116666 v -1.19062 -1.19063 h -2.248959 -2.248958 v -1.05833 -1.05833 h -1.058334 -1.058333 v -1.05834 -1.05833 h -1.058333 -1.058334 v -1.05833 -1.05834 h -2.116666 -2.116667 v -1.05833 -1.05833 h -1.058333 -1.058334 v -1.05834 -1.05833 h -1.058333 -1.058333 v -2.24896 -2.24896 h -1.190625 -1.190625 v -1.05833 -1.05833 h -1.058334 -1.058333 v -2.11667 -2.11667 h -1.058333 -1.058334 v -1.05833 -1.05833 H 47.729374 46.67104 v -3.175 -3.175 h -1.058333 -1.058333 v -3.3073 -3.30729 H 43.49604 42.437707 v -15.08125 -15.08125 h 1.058333 1.058334 v -3.175 -3.175 h 1.058333 1.058333 v -2.24896 -2.24895 h 1.058334 1.058333 v -2.11667 -2.11667 h 1.058334 1.058333 v -1.05833 -1.05833 h 1.058333 1.058334 v -2.11667 -2.11667 h 1.190625 1.190625 v -1.05833 -1.05833 h 1.058333 1.058333 v -1.05834 -1.05833 h 1.058334 1.058333 v -1.19063 -1.19062 h 1.058333 1.058334 v -1.05833 -1.05834 h 1.058333 1.058333 v -1.05833 -1.05833 h 2.116667 2.116667 v -1.05834 -1.05833 h 1.190625 1.190625 v -1.05833 -1.05834 h 2.116667 2.116666 v -1.05833 -1.05833 h 3.175 3.175 v -1.05833 -1.05834 h 3.307292 3.307292 v -1.19062 -1.19063 h 12.832292 12.83229 v 1.19063 1.19062 h 3.30729 3.30729 v 1.05834 1.05833 h 3.175 3.175 v 1.05833 1.05833 h 2.11667 2.11667 v 1.05834 1.05833 h 1.19062 1.19063 v 1.05833 1.05834 h 2.11666 2.11667 v 1.05833 1.05833 h 1.05833 1.05834 v 1.05834 1.05833 h 1.05833 1.05833 v 1.19062 1.19063 h 1.05834 1.05833 v 1.05833 1.05834 h 1.05833 1.05834 v 1.05833 1.05833 h 1.19062 1.19063 v 2.11667 2.11667 h 1.05833 1.05833 v 1.05833 1.05833 h 1.05834 1.05833 v 2.11667 2.11667 h 1.05833 1.05834 v 2.24895 2.24896 h 1.05833 1.05833 v 3.175 3.175 h 1.05834 1.05833 v 15.08125 15.08125 h -1.05833 -1.05834 v 3.30729 3.3073 h -1.05833 -1.05833 v 3.175 3.175 h -1.05834 -1.05833 v 1.05833 1.05833 h -1.05833 -1.05834 v 2.11667 2.11667 h -1.05833 -1.05833 v 1.05833 1.05833 h -1.19063 -1.19062 v 1.19063 1.19062 h -1.05834 -1.05833 v 2.11667 2.11667 h -1.05833 -1.05834 v 1.05833 1.05833 h -2.11666 -2.11667 v 1.05834 1.05833 h -1.05833 -1.05834 v 1.05833 1.05834 h -2.24895 -2.24896 v 1.05833 1.05833 h -1.05834 -1.05833 v 1.19063 1.19062 h -2.11667 -2.11666 v 1.05834 1.05833 h -3.175 -3.175 v 1.05833 1.05834 H 112.42 106.99604 v 1.05833 1.05833 h -6.48229 -6.482292 z m 17.197912,-4.23333 v -1.05834 h 4.36563 4.36562 v -1.19062 -1.19063 h 2.11667 2.11667 v -1.05833 -1.05833 h 2.11666 2.11667 v -1.05834 -1.05833 h 2.24896 2.24896 v -1.05833 -1.05834 h 1.05833 1.05833 v -1.05833 -1.05833 h 1.05834 1.05833 v -1.05834 -1.05833 h 1.05833 1.05834 v -1.05833 -1.05834 h 1.05833 1.05833 v -1.19062 -1.19063 h 1.05834 1.05833 v -1.05833 -1.05833 h 1.05833 1.05834 v -2.11667 -2.11667 h 1.19062 1.19063 v -1.05833 -1.05833 h 1.05833 1.05833 v -2.11667 -2.11667 h 1.05834 1.05833 v -3.30729 -3.30729 h 1.05833 1.05834 v -4.23333 -4.23334 h 1.05833 1.05833 v -7.54062 -7.54063 h -1.05833 -1.05833 v -5.42396 -5.42395 h -1.05834 -1.05833 v -2.11667 -2.11667 h -1.05833 -1.05834 v -2.24896 -2.24895 h -1.05833 -1.05833 v -2.11667 -2.11667 h -1.19063 -1.19062 v -1.05833 -1.05833 h -1.05834 -1.05833 v -2.11667 -2.11667 h -1.05833 -1.05834 v -1.05833 -1.05833 h -1.05833 -1.05833 v -1.05834 -1.05833 h -2.11667 -2.11667 v -1.19063 -1.19062 h -1.05833 -1.05833 v -1.05833 -1.05834 h -1.19063 -1.19062 v -1.05833 -1.05833 h -2.11667 -2.11667 v -1.05834 -1.05833 h -2.11666 -2.11667 v -1.05833 -1.05834 H 118.77 115.46271 v -1.05833 -1.05833 H 100.51375 85.564791 v 1.05833 1.05833 h -3.307292 -3.307291 v 1.05834 1.05833 h -2.116667 -2.116667 v 1.05833 1.05834 h -2.116666 -2.116667 v 1.05833 1.05833 h -1.190625 -1.190625 v 1.05834 1.05833 h -1.058334 -1.058333 v 1.19062 1.19063 h -2.116667 -2.116666 v 1.05833 1.05834 h -1.058334 -1.058333 v 1.05833 1.05833 h -1.058333 -1.058334 v 2.11667 2.11667 h -1.058333 -1.058333 v 1.05833 1.05833 h -1.190625 -1.190625 v 2.11667 2.11667 h -1.058334 -1.058333 v 2.24895 2.24896 h -1.058333 -1.058334 v 2.11667 2.11667 H 47.729374 46.67104 v 4.36562 4.36563 h -1.058333 -1.058333 v 8.59895 8.59896 h 1.058333 1.058333 v 4.23334 4.23333 h 1.058334 1.058333 v 3.30729 3.30729 h 1.058334 1.058333 v 2.11667 2.11667 h 1.058333 1.058334 v 2.11666 2.11667 h 1.190625 1.190625 v 1.05833 1.05834 h 1.058333 1.058333 v 1.05833 1.05833 h 1.058334 1.058333 v 1.19063 1.19062 h 1.058333 1.058334 v 1.05834 1.05833 h 1.058333 1.058333 v 1.05833 1.05834 h 1.058334 1.058333 v 1.05833 1.05833 h 1.058333 1.058334 v 1.05834 1.05833 h 2.248958 2.248959 v 1.05833 1.05834 h 2.116666 2.116667 v 1.05833 1.05833 h 2.116667 2.116666 v 1.19063 1.19062 h 4.365625 4.365626 v 1.05834 1.05833 h 10.715625 10.71562 z m -21.431245,-6.61459 v -1.05833 h -3.307292 -3.307292 v -1.05833 -1.05834 h -2.116667 -2.116666 v -1.05833 -1.05833 h -2.116667 -2.116667 v -1.05834 -1.05833 h -2.116666 -2.116667 v -1.05833 -1.05834 h -1.190625 -1.190625 v -1.19062 -1.19063 h -1.058334 -1.058333 v -1.05833 -1.05833 h -1.058333 -1.058334 v -1.05834 -1.05833 h -1.058333 -1.058333 v -2.11667 -2.11666 h -1.058334 -1.058333 v -1.05834 -1.05833 h -1.058333 -1.058334 v -2.11667 -2.11666 h -1.058333 -1.058333 v -2.24896 -2.24896 h -1.190625 -1.190625 v -4.23333 -4.23334 h -1.058334 -1.058333 v -7.54062 -7.54063 h 1.058333 1.058334 v -4.36562 -4.36563 h 1.190625 1.190625 v -3.175 -3.175 h 1.058333 1.058333 v -1.05833 -1.05833 h 1.058334 1.058333 v -2.24896 -2.24896 h 1.058333 1.058334 v -1.05833 -1.05834 h 1.058333 1.058333 v -1.05833 -1.05833 h 1.058334 1.058333 v -1.05834 -1.05833 h 1.058333 1.058334 v -1.05833 -1.05834 h 1.190625 1.190625 v -1.05833 -1.05833 h 1.058333 1.058334 v -1.05834 -1.05833 h 2.116666 2.116667 v -1.19063 -1.19062 h 2.116667 2.116666 v -1.05833 -1.05834 h 2.248959 2.248958 v -1.05833 -1.05833 h 13.89063 13.890619 v 1.05833 1.05833 h 3.30729 3.30729 v 1.05834 1.05833 h 2.11667 2.11667 v 1.19062 1.19063 h 2.11666 2.11667 v 1.05833 1.05834 h 1.05833 1.05834 v 1.05833 1.05833 h 1.19062 1.19063 v 1.05834 1.05833 h 1.05833 1.05833 v 1.05833 1.05834 h 1.05834 1.05833 v 1.05833 1.05833 h 1.05833 1.05834 v 1.05834 1.05833 h 1.05833 1.05833 v 2.24896 2.24896 h 1.05834 1.05833 v 2.11666 2.11667 h 1.05833 1.05834 v 2.11667 2.11666 h 1.19062 1.19063 v 4.36563 4.36562 h 1.05833 1.05833 v 6.48229 6.4823 h -1.05833 -1.05833 v 5.29166 5.29167 h -1.19063 -1.19062 v 2.24896 2.24896 h -1.05834 -1.05833 v 2.11666 2.11667 h -1.05833 -1.05834 v 2.11667 2.11666 h -1.05833 -1.05833 v 1.05834 1.05833 h -1.05834 -1.05833 v 1.05833 1.05834 h -1.05833 -1.05834 v 1.05833 1.05833 h -1.05833 -1.05833 v 1.19063 1.19062 h -1.19063 -1.19062 v 1.05834 1.05833 h -2.11667 -2.11667 v 1.05833 1.05834 h -2.11666 -2.11667 v 1.05833 1.05833 h -2.11667 -2.11666 v 1.05834 1.05833 h -3.30729 -3.3073 v 1.05833 1.05834 H 100.51375 89.798125 Z m 23.547915,-4.23333 v -1.05833 h 3.30729 3.30729 v -1.05834 -1.05833 h 2.11667 2.11667 v -1.05833 -1.05834 h 1.05833 1.05833 v -1.19062 -1.19063 h 1.05834 1.05833 v -1.05833 -1.05833 h 2.24896 2.24896 v -1.05834 -1.05833 h 1.05833 1.05833 v -2.11667 -2.11666 h 1.05834 1.05833 v -1.05834 -1.05833 h 1.05833 1.05834 v -2.11667 -2.11666 h 1.05833 1.05833 v -2.24896 -2.24896 h 1.05834 1.05833 v -3.175 -3.175 h 1.05833 1.05834 v -9.65729 -9.65729 h -1.05834 -1.05833 v -4.36563 -4.36562 h -1.05833 -1.05834 v -2.11667 -2.11667 h -1.05833 -1.05833 v -1.05833 -1.05833 h -1.05834 -1.05833 v -2.24896 -2.24896 h -1.05833 -1.05834 v -1.05833 -1.05834 h -1.05833 -1.05833 v -1.05833 -1.05833 h -1.19063 -1.19062 v -1.05834 -1.05833 h -1.05834 -1.05833 v -1.05833 -1.05834 h -2.11667 -2.11666 v -1.05833 -1.05833 h -1.05834 -1.05833 v -1.05834 -1.05833 H 118.77 115.46271 v -1.19063 -1.19062 h -3.175 -3.175 v -1.05833 -1.05834 h -7.54063 -7.540622 v 1.05834 1.05833 h -4.233333 -4.233334 v 1.19062 1.19063 h -3.307292 -3.307291 v 1.05833 1.05834 h -1.058334 -1.058333 v 1.05833 1.05833 h -2.116667 -2.116666 v 1.05834 1.05833 h -1.058334 -1.058333 v 1.05833 1.05834 h -1.190625 -1.190625 v 1.05833 1.05833 h -1.058334 -1.058333 v 1.05834 1.05833 h -1.058333 -1.058334 v 2.24896 2.24896 h -1.058333 -1.058333 v 1.05833 1.05833 h -1.058334 -1.058333 v 2.11667 2.11667 h -1.058333 -1.058334 v 3.175 3.175 h -1.058333 -1.058333 v 10.84791 10.84792 h 1.058333 1.058333 v 3.175 3.175 h 1.058334 1.058333 v 2.24896 2.24896 h 1.058333 1.058334 v 2.11666 2.11667 h 1.058333 1.058333 v 1.05833 1.05834 h 1.058334 1.058333 v 2.11666 2.11667 h 1.058333 1.058334 v 1.05833 1.05834 h 2.248958 2.248959 v 1.05833 1.05833 h 1.058333 1.058333 v 1.19063 1.19062 h 1.058334 1.058333 v 1.05834 1.05833 h 2.116667 2.116666 v 1.05833 1.05834 h 3.307292 3.307292 v 1.05833 1.05833 h 12.832292 12.83229 z M 76.833541,187.71373 v -1.05833 h -1.058333 -1.058334 v -2.11667 -2.11667 h -1.058333 -1.058333 v -17.33021 -17.3302 h 1.058333 1.058333 v -2.11667 -2.11667 h 1.058334 1.058333 v -1.05833 -1.05833 h 4.365625 4.365625 v 2.11666 2.11667 h 2.116667 2.116667 v -1.05833 -1.05834 h 1.058333 1.058333 v -2.11666 -2.11667 h 1.058334 1.058333 v -3.30729 -3.30729 h 1.058333 1.058334 v -2.11667 -2.11667 h 1.058333 1.058333 v -1.05833 -1.05833 h 1.05833 1.058339 v -1.05834 -1.05833 h 2.24896 2.24895 v 1.05833 1.05834 h 2.11667 2.11667 v 1.05833 1.05833 h 1.05833 1.05833 v 7.54063 7.54062 h -1.05833 -1.05833 v 1.05834 1.05833 h 9.65729 9.65729 v 1.05833 1.05834 h 1.05833 1.05834 v 2.24895 2.24896 h 1.19062 1.19063 v 1.05834 1.05833 h -1.19063 -1.19062 v 5.42396 5.42396 h -1.05834 -1.05833 v 5.29166 5.29167 h -1.05833 -1.05834 v 3.30729 3.30729 h -1.05833 -1.05833 v 1.05834 1.05833 H 104.87937 85.564791 v 1.05833 1.05834 h -1.190625 -1.190625 v 1.05833 1.05833 h -3.175 -3.175 z m 4.233333,-2.11667 v -1.05833 h 1.058334 1.058333 v -19.44688 -19.44687 h -1.058333 -1.058334 v -1.05833 -1.05834 h -1.058333 -1.058333 v 1.05834 1.05833 h -1.058334 -1.058333 v 19.44687 19.44688 h 1.058333 1.058334 v 1.05833 1.05834 h 1.058333 1.058333 z m 36.777086,-4.23333 v -1.05833 h 2.11666 2.11667 v -1.19063 -1.19062 h 1.05833 1.05834 v -4.23334 -4.23333 h 1.05833 1.05833 v -5.42396 -5.42396 h 1.05834 1.05833 v -4.23333 -4.23333 h -2.11667 -2.11666 v -1.19063 -1.19062 h -9.65729 -9.6573 v -2.11667 -2.11667 h 1.05834 1.05833 v -3.175 -3.175 h 1.05833 1.05834 v -2.24896 -2.24895 h -1.05834 -1.05833 v -2.11667 -2.11667 h -3.30729 -3.30729 v 2.11667 2.11667 h -1.058339 -1.05833 v 2.24895 2.24896 h -1.058333 -1.058333 v 3.175 3.175 h -1.058334 -1.058333 v 2.11667 2.11667 h -3.175 -3.175 v 17.3302 17.33021 h 15.081252 15.08125 z M 27.356457,105.95748 v -3.175 h 1.058333 1.058333 v -3.307292 -3.30729 h 1.058334 1.058333 v -2.11667 -2.11666 h -1.058333 -1.058334 v -1.05834 -1.05833 H 27.356457 25.23979 v -1.05833 -1.05834 h -1.058333 -1.058334 v -1.19062 -1.19063 h -1.190625 -1.190625 v -1.05833 -1.05833 H 19.68354 18.625207 v -1.05834 -1.05833 h 8.598958 8.598959 v -3.175 -3.175 h 1.058333 1.058333 v -3.30729 -3.30729 h 1.190625 1.190625 v -1.05834 -1.05833 h 1.058334 1.058333 v 1.05833 1.05834 h 1.058333 1.058334 v 3.30729 3.30729 h 1.058333 1.058333 v 3.175 3.175 h 8.598959 8.598958 v 1.05833 1.05834 h -1.058333 -1.058333 v 1.05833 1.05833 h -1.058334 -1.058333 v 1.19063 1.19062 h -1.058333 -1.058334 v 1.05834 1.05833 h -2.248958 -2.248958 v 1.05833 1.05834 h -1.058334 -1.058333 v 2.11666 2.11667 h 1.058333 1.058334 v 3.30729 3.307292 h 1.190625 1.190625 v 3.175 3.175 h -1.190625 -1.190625 v -1.05833 -1.05834 h -2.116667 -2.116667 v -1.05833 -1.05833 H 47.729374 46.67104 v -1.05833 -1.05834 h -1.058333 -1.058333 v -1.19062 -1.19063 H 41.247082 37.93979 v 1.19063 1.19062 h -1.058333 -1.058333 v 1.05834 1.05833 H 34.76479 33.706457 v 1.05833 1.05833 H 31.58979 29.473123 v 1.05834 1.05833 H 28.41479 27.356457 Z m 8.466667,-6.614582 v -1.05833 h 1.058333 1.058333 v -1.05834 -1.05833 h 3.307292 3.307292 v 1.05833 1.05834 h 1.058333 1.058333 v 1.05833 1.058332 h 2.116667 2.116667 v -1.058332 -1.05833 h -1.058333 -1.058334 v -2.11667 -2.11667 H 47.729374 46.67104 v -1.05833 -1.05833 h 1.058334 1.058333 v -1.05834 -1.05833 h 1.058334 1.058333 v -1.05833 -1.05834 h 1.058333 1.058334 v -1.19062 -1.19063 h -3.175 -3.175001 v -1.05833 -1.05833 h -1.058333 -1.058333 v -2.11667 -2.11667 H 43.49604 42.437707 v -1.05833 -1.05833 H 41.379374 40.32104 v 2.11666 2.11667 H 39.130415 37.93979 v 1.05833 1.05834 h -1.058333 -1.058333 v 1.05833 1.05833 h -3.175 -3.175001 v 1.19063 1.19062 h 1.058334 1.058333 v 1.05834 1.05833 h 1.058334 1.058333 v 1.05833 1.05834 h 1.058333 1.058334 v 1.05833 1.05833 H 34.76479 33.706457 v 3.175 3.175002 h 1.058333 1.058334 z m 109.802086,6.614582 v -3.175 h 1.19062 1.19063 v -4.365622 -4.36563 h 1.05833 1.05833 v -1.05833 -1.05833 h -1.05833 -1.05833 v -1.05834 -1.05833 h -2.24896 -2.24896 v -1.05833 -1.05834 h -1.05833 -1.05834 v -1.19062 -1.19063 h -2.11666 -2.11667 v -2.11666 -2.11667 h 8.59896 8.59896 v -3.175 -3.175 h 1.05833 1.05833 v -3.30729 -3.30729 h 1.05834 1.05833 v -1.05834 -1.05833 h 1.05833 1.05834 v 1.05833 1.05834 h 1.05833 1.05833 v 3.30729 3.30729 h 1.19063 1.19062 v 3.175 3.175 h 8.59896 8.59896 v 1.05833 1.05834 h -1.05833 -1.05833 v 1.05833 1.05833 h -1.19063 -1.19062 v 1.19063 1.19062 h -1.05834 -1.05833 v 1.05834 1.05833 h -2.11667 -2.11666 v 1.05833 1.05834 h -1.05834 -1.05833 v 2.11666 2.11667 h 1.05833 1.05834 v 3.30729 3.307292 h 1.05833 1.05833 v 3.175 3.175 h -2.11666 -2.11667 v -1.05833 -1.05834 h -1.05834 -1.05833 v -1.05833 -1.05833 h -1.05833 -1.05834 v -1.05833 -1.05834 h -2.24895 -2.24896 v -1.19062 -1.19063 h -2.11667 -2.11667 v 1.19063 1.19062 h -1.05833 -1.05833 v 1.05834 1.05833 h -1.05834 -1.05833 v 1.05833 1.05833 h -2.11667 -2.11666 v 1.05834 1.05833 h -1.19063 -1.19062 z m 8.73125,-6.614582 v -1.05833 h 1.05833 1.05833 v -1.05834 -1.05833 h 3.175 3.175 v 1.05833 1.05834 h 1.19063 1.19062 v 1.05833 1.058332 h 1.05834 1.05833 v -3.175002 -3.175 h -1.05833 -1.05834 v -2.11666 -2.11667 h 2.11667 2.11667 v -1.05833 -1.05834 h 1.05833 1.05834 v -1.19062 -1.19063 h -3.17501 -3.175 v -1.05833 -1.05833 h -1.19062 -1.19063 v -1.05834 -1.05833 h -1.05833 -1.05833 v -2.11667 -2.11666 h -1.05834 -1.05833 v 1.05833 1.05833 h -1.05833 -1.05834 v 2.11667 2.11667 h -1.05833 -1.05833 v 1.05833 1.05833 h -3.175 -3.175 v 1.19063 1.19062 h 1.05833 1.05833 v 1.05834 1.05833 h 1.05834 1.05833 v 4.23333 4.23334 h -1.05833 -1.05834 v 1.05833 1.058332 h 2.11667 2.11667 z M 85.564791,88.759568 v -1.05834 h 1.058334 1.058333 v -4.36562 -4.36563 h 1.058333 1.058334 v -3.175 -3.175 h -1.058334 -1.058333 v -1.19062 -1.19063 h -2.248959 -2.248958 v -1.05833 -1.05833 h -1.058333 -1.058334 v -1.05834 -1.05833 h -1.058333 -1.058333 v -2.11667 -2.11666 h 7.540625 7.540625 v -1.05834 -1.05833 h 1.058333 1.058334 v -3.30729 -3.30729 h 1.058333 1.058333 v -3.175 -3.175 h 1.05833 1.058339 v 1.05833 1.05833 h 1.19062 1.19063 v 2.11667 2.11667 h 1.05833 1.05833 v 3.30729 3.30729 h 1.05834 1.05833 v 1.05833 1.05834 h 7.54063 7.54062 v 2.11666 2.11667 h -1.05833 -1.05834 v 1.05833 1.05834 h -1.05833 -1.05833 v 1.05833 1.05833 h -2.24896 -2.24896 v 1.19063 1.19062 h -1.05833 -1.05834 v 4.23334 4.23333 h 1.05834 1.05833 v 2.11667 2.11666 h 1.05833 1.05834 v 2.24896 2.24896 h -2.11667 -2.11667 v -1.05833 -1.05834 h -2.11666 -2.11667 v -1.19062 -1.19063 h -1.05833 -1.05834 v -1.05833 -1.05833 h -2.24895 -2.24896 v -1.05834 -1.05833 h -1.058339 -1.05833 v 1.05833 1.05834 h -1.058333 -1.058333 v 1.05833 1.05833 h -1.058334 -1.058333 v 1.19063 1.19062 h -2.116667 -2.116666 v 1.05834 1.05833 h -2.116667 -2.116667 z m 10.583334,-8.73125 v -1.05834 h 1.058333 1.058333 v -1.05833 -1.05833 h 2.248959 2.24896 v 1.05833 1.05833 h 1.05833 1.05833 v 1.05834 1.05833 h 2.11667 2.11667 v -1.05833 -1.05834 h -1.05834 -1.05833 v -3.175 -3.175 h 1.05833 1.05834 v -1.19062 -1.19063 h 1.05833 1.05833 v -1.05833 -1.05833 h 1.05834 1.05833 v -1.05834 -1.05833 h -4.23333 -4.23334 v -1.05833 -1.05834 h -1.05833 -1.05833 v -3.175 -3.175 h -2.24896 -2.248959 v 3.175 3.175 h -1.058333 -1.058333 v 1.05834 1.05833 h -4.233334 -4.233333 v 1.05833 1.05834 h 1.058333 1.058334 v 1.05833 1.05833 h 2.116666 2.116667 v 4.36563 4.36562 h -1.058333 -1.058334 v 1.05834 1.05833 h 2.116667 2.116667 z"
                   id="path1"
                 />
               </svg>
             </motion.div>
 
-            <div className="text-neutral-700 group-hover:text-black text-[20px] font-bold font-poppins">
+            <div className="text-neutral-700 group-hover:text-black text-[20px] font-bold font-poppins xs:text-[14px]">
               Easy Booking
             </div>
             <div className="flex-col justify-center items-center gap-[35px] flex">
-              <div className="xs:w-[220px] w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-7  leading-5 text-justify">
+              <div className="w-[262px] h-[73px] group-hover:text-white text-black text-base font-normal font-poppins px-7  leading-5 text-justify xs:px-16 xs:text-[10px]">
                 Easy Booking: Hassle-free online and offline booking with
                 flexible rental options.
               </div>
               <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
+               
               </div>
             </div>
           </div>
         </div>
-       
-    </div>
-    
-     <div className="w-full -z-9 h-[750px] relative bg-gradient-to-b  from-yellow-400 via-transparent to-transparent rounded-3xl flex items-center justify-right xs:-top-[820px] -top-[720px] ">
-     {/* This container has opacity, and the heading is outside it */}
-   </div>
-   </>
+      </div>
+
+      <div className="w-full -z-9 h-[750px] relative bg-gradient-to-b  from-yellow-400 via-transparent to-transparent rounded-3xl flex items-center justify-right xs:-top-[820px] -top-[720px] ">
+        {/* This container has opacity, and the heading is outside it */}
+      </div>
+      {/* </Fade> */}
+    </>
   );
 };
 
