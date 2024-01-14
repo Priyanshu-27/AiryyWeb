@@ -119,7 +119,7 @@ function Footer() {
             </ul>
           </div>
           <div className="flex  dark:text-white flex-col gap-4 h-[11rem] mr-10 pt-8">
-            <div className="border-y-2 mt-4"/>
+            <div className="border-y-2 mt-4 border-yellow-400 "/>
           <CiFacebook size={35} />
           <RiTwitterXLine className="cursor-pointer mt-[0.06rem]" size={28} />
           <FaInstagram className="cursor-pointer mt-[0.06rem]" size={28} />
@@ -129,7 +129,7 @@ function Footer() {
 
       {/* Dynamic date and website URL */}
       <div className="w-screen snap-start justify-between flex xs:hidden ss:hidden px-44 text-white">
-        <p>&copy; {currentYear} airyyrides.com</p>
+      <p><span className="text-yellow-400">&copy;</span> {currentYear} airyyrides.com</p>
         {/* Social Links for larger screens */}
         <div className="flex xs:hidden ss:hidden dark:text-white flex-row gap-4 h-[5rem] ">
           <CiFacebook size={28} />
@@ -139,7 +139,7 @@ function Footer() {
       </div>
       
       <div className="w-screen snap-start justify-center pb-6 flex sm:hidden  text-white">
-        <p>&copy; {currentYear} airyyrides.com</p>
+        <p><span className="text-yellow-400">&copy;</span> {currentYear} airyyrides.com</p>
         {/* Social Links for larger screens */}
        
       </div>
