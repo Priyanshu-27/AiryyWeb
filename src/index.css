@@ -11,8 +11,14 @@ html,
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  @apply bg-dimWhite  dark:bg-black ;
+
+  @apply bg-dimWhite  dark:bg-black   text-black dark:text-white ;
   @apply overflow-x-hidden scrollbar-none scrollbar-track-[#ffb52c33];
 }
 

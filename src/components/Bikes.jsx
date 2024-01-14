@@ -15,7 +15,7 @@ const Bikes = () => {
           {/* Card content goes here */}
 
           <img src={b5} alt="img bike" />
-          <p className="py-5 text-bold text-[20px] font-poppins">
+          <p className="py-5 font-bold text-[20px] font-poppins">
             Total Electric Bikes
           </p>
           <p>18</p>
@@ -26,7 +26,7 @@ const Bikes = () => {
           {/* Card content goes here */}
 
           <img src={b4} alt="img bike" />
-          <p className="py-5 text-bold text-[20px] font-poppins">Range</p>
+          <p className="py-5 font-bold text-[20px] font-poppins">Range</p>
           <p className="w-40 text-center">
              50 kilometres after being fully charged
           </p>
@@ -37,7 +37,7 @@ const Bikes = () => {
           {/* Card content goes here */}
 
           <img src={b3} alt="img bike" />
-          <p className="py-5 text-bold text-[20px] font-poppins">
+          <p className="py-5 font-bold text-[20px] font-poppins">
             Total Electric Bikes
           </p>
           <p>18</p>
@@ -48,7 +48,7 @@ const Bikes = () => {
           {/* Card content goes here */}
 
           <img src={b2} alt="img bike" />
-          <p className="py-5 text-bold text-[20px] font-poppins">
+          <p className="py-5 font-bold text-[20px] font-poppins">
             Total Electric Bikes
           </p>
           <p>18</p>
@@ -59,7 +59,7 @@ const Bikes = () => {
           {/* Card content goes here */}
 
           <img src={b1} alt="img bike" />
-          <p className="py-5 text-bold text-[20px] font-poppins">
+          <p className="py-5 font-bold text-[20px] font-poppins">
             Total Electric Bikes
           </p>
           <p>18</p>
