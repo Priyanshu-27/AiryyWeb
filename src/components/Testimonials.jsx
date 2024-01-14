@@ -193,7 +193,7 @@ const Testimonials = () => {
             </div>
 
             <div className="w-[300px]  h-[25.31px]  sm:text-5xl lg:text-2xl  font-poppins">
-              <div className="dark:text-dimWhite mt-8 xs:mt-2   sm:text-[25px] xl:text-[24px]   font-poppins leading-9 w-[490px] xs:w-[320px] text-justify">
+              <div className="dark:text-white mt-8 xs:mt-2   sm:text-[25px] xl:text-[24px]   font-poppins leading-9 w-[490px] xs:w-[320px] text-justify">
                 Don't just take our word for it hear from our satisfied riders
                 who have experienced the joy of AiRYY Rides.
               </div>

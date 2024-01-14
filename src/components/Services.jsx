@@ -6,13 +6,13 @@ const Services = () => {
     <>
     <div
       id="Services"
-      className="Services  snap-center xs:snap-start   z-[10]  h-screen  relative xs:w-full"
+      className="Services  snap-center xs:snap-start   z-[10] top-5 h-screen  relative xs:w-full"
     >
       {/* Parent container with opacity */}
 
 
       {/* Heading outside the parent container with opacity */}
-      <h1 className=" dark:text-white text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-20 md:mb-0 md:col-span-3">
+      <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-20 md:mb-0 md:col-span-3">
         Why Choose AiRYY Rides?
       </h1>
     
