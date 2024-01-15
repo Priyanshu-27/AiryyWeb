@@ -10,7 +10,7 @@ const About = () => {
       >
         <div
           id="About"
-          className="overflow-hidden     relative flex flex-row w-full font-['Inter']  snap-end  snap-mandatory items-start pt-[0px] px-[209px]"
+          className="overflow-hidden     relative flex flex-row w-full font-poppins snap-end  snap-mandatory items-start pt-[0px] px-[209px]"
         >
           <div
             id="Ellipse"
@@ -30,13 +30,13 @@ const About = () => {
           </div>
           <Fade left>
             <div className="text-justify text-xl font-poppins leading-[23px] dark:text-white relative w-2/5 mt-40 mb-[213px]">
-              <div className="text-3xl font-poppins font-bold leading-[36px] dark:text-gray-300 w-1/1">
+              <div className="text-3xl font-poppins font-semibold leading-[36px] dark:text-gray-300 w-1/1">
                 About Us
               </div>
-              <div className="text-2xl font-bold font-poppins leading-[56px] dark:text-gray-300 w-1/1">
+              <div className="text-2xl font-medium font-poppins leading-[56px] dark:text-gray-300 w-1/1">
                 AiRYY Rides! Ride, Return, Repeat.
               </div>
-              <p className="leading-[30px]">
+              <p className="leading-[30px] font-light text-gray-100">
                 {" "}
                 Welcome to AiRYY Rides, where we go beyond just providing bikes;
                 we're dedicated to creating unforgettable experiences.Our
