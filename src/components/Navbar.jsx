@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import CanvasModel from "./3dLogo/CanvasModel";
-import { CiMenuBurger } from "react-icons/ci";
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa6";
+import { RiTwitterXLine } from "react-icons/ri";
 import Logo from "../assets/airyyLogo.png";
-
+const currentYear = new Date().getFullYear();
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -10,7 +11,7 @@ const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const whatsappNumber = "8109475317"; 
+  const whatsappNumber = "8109475317";
 
   const handleRentNowClick = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
@@ -19,7 +20,7 @@ const Navbar = () => {
 
   const [MobileMenu, setMobileMenu] = useState(false);
   return (
-    <div id='Nav' className="">
+    <div id="Nav" className="">
       <header className="sticky snap-start z-[139]  border-b border-transparent  ">
         <div className="md:max-w-7xl mx-auto w-full max-w-5xl px-6">
           <div className="absolute left-0 top-0 z-20 flex w-full flex-col items-center bg-root md:hidden">
@@ -82,13 +83,13 @@ const Navbar = () => {
             </div>
             {MobileMenu ? (
               <div
-                className="flex bg-black h-screen  w-full px-6 py-4 md:hidden block"
+                className="flex bg-black h-screen   w-full px-6 py-4 md:hidden "
                 id="mobile-menu"
               >
-                <div className="flex w-full flex-col">
+                <div className=" flex w-full flex-col">
                   <a
                     className="text-base h-11 pl-4 pr-4 rounded-md gap-2 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-white/20 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200 mb-4 w-full"
-                    onClick={{handleRentNowClick}}
+                    onClick={{ handleRentNowClick }}
                   >
                     Contact Now
                   </a>
@@ -98,14 +99,48 @@ const Navbar = () => {
                   >
                     About
                   </a>
-
+                  <a
+                    className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
+                    onClick={() => scrollToSection("Contact")}
+                  >
+                    Services
+                  </a>
+                  <a
+                    className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
+                    onClick={() => scrollToSection("Bikes")}
+                  >
+                    Bikes
+                  </a>
+                  <a
+                    className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
+                    onClick={() => scrollToSection("Testimonials")}
+                  >
+                    Testimonials
+                  </a>
                   <a
                     className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
                     onClick={() => scrollToSection("Contact")}
                   >
                     Contact
                   </a>
-                  
+
+                  <div className="flex flex-row pb-20 text-md  w-full  py-20 gap-6 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12">
+                    <p>
+                      <span className="text-yellow-400">&copy;</span>{" "}
+                      {currentYear} airyyrides.com
+                    </p>
+
+                    <div className="border-y-2 mt-4 gap-0 border-yellow-400 " />
+                    <CiFacebook size={25} />
+                    <RiTwitterXLine
+                      className="cursor-pointer mt-[0.06rem]"
+                      size={24}
+                    />
+                    <FaInstagram
+                      className="cursor-pointer mt-[0.06rem]"
+                      size={24}
+                    />
+                  </div>
                 </div>
               </div>
             ) : null}
@@ -140,7 +175,7 @@ const Navbar = () => {
                   About
                 </a>
               </li>
-  
+
               <li>
                 <a
                   className="cursor-pointer dark:text-white outline-none transition duration-150 ease-in-out focus-visible:ring-2 focus-visible:ring-slate-7 rounded-md px-1 py-1 text-sm font-medium text-slate-11 hover:text-slate-12 focus-visible:text-slate-12 lg:px-2"
@@ -157,8 +192,7 @@ const Navbar = () => {
                   Testimonials
                 </a>
               </li>
-              <li
-              >
+              <li>
                 <a
                   className="cursor-pointer dark:text-white outline-none transition duration-150 ease-in-out focus-visible:ring-2 focus-visible:ring-slate-7 rounded-md px-1 py-1 text-sm font-medium text-slate-11 hover:text-slate-12 focus-visible:text-slate-12 lg:px-2"
                   onClick={() => scrollToSection("Bikes")}
@@ -176,11 +210,9 @@ const Navbar = () => {
               </li>
             </ul>
             <div class="flex gap-4">
-            
               <a
                 class="outline-none  cursor-pointer focus-visible:ring-slate-7 text-sm h-10 pl-4 pr-2 gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
                 data-state="closed"
-                
               >
                 Contact Now
                 <span class="text-[#70757E]">
