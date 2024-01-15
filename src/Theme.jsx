@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { BsArrowUp } from "react-icons/bs";
 
 const Theme = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -37,6 +38,13 @@ const Theme = () => {
     setIsInitialRenderComplete(true);
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const toggleTheme = () => {
     const newTheme = isLightMode ? "dark" : "light";
     localStorage.theme = newTheme;
@@ -54,23 +62,33 @@ const Theme = () => {
   };
 
   return (
-    <div className={`fixed z-[1001] ${scrolling ? "z-[10000000]" : ""} flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1 ${scrolling ? "md:py-5 " : "md:py-0 "} bg-transparent`}>
-      {isInitialRenderComplete && isLightMode !== undefined && ( // Check if the initial render is complete and isLightMode is defined
-        isLightMode ? (
-          <FaSun
-            onClick={toggleTheme}
-            style={{ height: "50px" }}
-            className={`xl:mx-5 text-[#FDB813] sm:mr-10`}
-          />
-        ) : (
-          <FaMoon
-            onClick={toggleTheme}
-            style={{ height: "50px" }}
-            className={`xl:mx-5 text-black sm:mr-10`}
-          />
-        )
-      )}
-    </div>
+    <>
+      <div className={`fixed z-[1001] ${scrolling ? "z-[10000000]" : ""} flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1 ${scrolling ? "md:py-5 " : "md:py-0 "} bg-transparent`}>
+        {isInitialRenderComplete && isLightMode !== undefined && ( // Check if the initial render is complete and isLightMode is defined
+          isLightMode ? (
+            <FaSun
+              onClick={toggleTheme}
+              style={{ height: "50px" }}
+              className={`xl:mx-5 text-[#FDB813] sm:mr-10`}
+            />
+          ) : (
+            <FaMoon
+              onClick={toggleTheme}
+              style={{ height: "50px" }}
+              className={`xl:mx-5 text-black sm:mr-10`}
+            />
+          )
+        )}
+      </div>
+      <a onClick={() => { scrollToSection('Nav') }} className={`fixed z-[1001] ${scrolling ? "z-[10000000]" : ""} text-white    flex justify-end items-end h-10 cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10 ${scrolling ? "md:py-5 " : "md:py-0 "} bg-transparent`}>
+        <BsArrowUp
+          onClick={() => scrollToSection('Nav')}
+          style={{ height: "50px" }}
+          className={`xl:mx-5 text-white sm:mr-10 xs:mr-10`}
+        />
+     
+      </a>
+    </>
   );
 };
 

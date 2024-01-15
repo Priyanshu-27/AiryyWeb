@@ -20,7 +20,7 @@ const Navbar = () => {
   const [MobileMenu, setMobileMenu] = useState(false);
   return (
     <div id='Nav' className="">
-      <header className="sticky snap-start z-[139] top-0 border-b border-transparent backdrop-blur-sm ">
+      <header className="sticky snap-start z-[139]  border-b border-transparent  ">
         <div className="md:max-w-7xl mx-auto w-full max-w-5xl px-6">
           <div className="absolute left-0 top-0 z-20 flex w-full flex-col items-center bg-root md:hidden">
             <div className="flex w-full items-center px-6 py-4">
@@ -94,17 +94,18 @@ const Navbar = () => {
                   </a>
                   <a
                     className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
-                    href="/about"
+                    onClick={() => scrollToSection("About")}
                   >
                     About
                   </a>
 
                   <a
                     className="text-md block w-full border-b border-slate-6 py-4 font-semibold text-slate-11 transition duration-200 ease-in-out last:border-none hover:text-slate-12"
-                    href="/contact"
+                    onClick={() => scrollToSection("Contact")}
                   >
                     Contact
                   </a>
+                  
                 </div>
               </div>
             ) : null}

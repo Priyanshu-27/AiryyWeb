@@ -1,7 +1,12 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 const Services = () => {
+  const whatsappNumber = "8109475317";
+
+  const handleRentNowClick = () => {
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+    window.location.href = whatsappLink;
+  };
   return (
     <>
       {/* <Fade bottom> */}
@@ -12,13 +17,13 @@ const Services = () => {
         {/* Parent container with opacity */}
 
         {/* Heading outside the parent container with opacity */}
-        <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-20 md:mb-0 md:col-span-3">
+        <h1 className=" dark:text-white  text-center font-poppins xs:text-[25px]  ss:text-[20px] text-[35px] font-bold mb-4 xs:pt-16 md:mb-0 md:col-span-3">
           Why Choose AiRYY Rides?
         </h1>
 
-        <div className="flex flex-row xs:m-3  xs:mr-10 xs:grid xs:grid-cols-2 xs:gap-0 gap-10 items-center justify-center mt-16 overflow-hidden xs:w-full">
+        <div className="flex flex-row xs:my-6 xs:mx-2   xs:grid xs:grid-cols-2 xs:gap-0 gap-10 items-center justify-center mt-16 overflow-hidden xs:w-full">
           {/* Box 1 */}
-          <div className="group xs:w-[180px] xs:h-[250px]  w-[250px] h-[327px]  px-[35px] py-[95px] bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] shadow flex-col justify-center items-center inline-flex transition-all duration-500">
+          <div className="group xs:w-[180px] xs:h-[250px]  w-[250px] h-[327px]  px-[35px] py-[95px] bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] shadow flex-col justify-center items-center inline-flex transition-all duration-500">
             <div className="flex-col  justify-center items-center gap-[35px] flex">
               <div className="self-stretch font-poppins text-center text-black text-[20px] font-bold xs:mt-1 xs:text-[14px]">
                 24/7 Service
@@ -29,7 +34,10 @@ const Services = () => {
                   embark on your adventure day or night.
                 </div>
                 <div className="px-2 py-2 bg-black rounded-md xs:py-1 xs:mt-3 mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
-                  <a className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]">
+                  <a
+                    onClick={{ handleRentNowClick }}
+                    className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]"
+                  >
                     Get Started Today
                   </a>
                 </div>
@@ -38,7 +46,7 @@ const Services = () => {
           </div>
 
           {/* Box 2 */}
-          <div className="group  xs:w-[180px] xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
+          <div className="group  xs:w-[180px] xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
             <svg
               width="210"
               height="297"
@@ -99,20 +107,15 @@ const Services = () => {
                 ensuring you enjoy the thrill of riding without straining your
                 finances.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px]  justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px]  justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
 
           {/* Box 3 */}
-          <div className="group  snap-center xs:snap-start snap-mandatory xs:w-[180px] xs:mt-4 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
+          <div className="group  snap-center xs:snap-start snap-mandatory xs:w-[180px] xs:mt-4 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
             <svg
               width="210"
               height="297"
-           
               viewBox="0 0 210 297"
               version="1.1"
               id="svg1"
@@ -169,16 +172,12 @@ const Services = () => {
                 Prioritizing safety, our bikes undergo regular maintenance to
                 guarantee a secure and worry-free riding experience.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
 
           {/* Box 4 */}
-          <div className="group xs:w-[180px] xs:mt-6 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-yellow-400 rounded-[30px] transition-all duration-500">
+          <div className="group xs:w-[180px] xs:mt-6 xs:h-[250px] w-[250px] h-[327px] flex-col justify-center items-center gap-[25px] inline-flex bg-slate-50 hover:bg-gradient-to-t from-black to-[#CFB735] rounded-[30px] transition-all duration-500">
             <motion.div>
               <svg
                 width="250"
@@ -203,11 +202,7 @@ const Services = () => {
                 Easy Booking: Hassle-free online and offline booking with
                 flexible rental options.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex">
-                {/* <div className="text-pink-50 text-[15px] font-semibold font-['Inter'] leading-[18px]">
-                  Learn More
-                </div> */}
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
         </div>

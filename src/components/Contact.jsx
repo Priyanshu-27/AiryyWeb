@@ -87,9 +87,9 @@ const Contact = () => {
 
         {/* form */}
 
-        <div className="formContainer  xs:z-[1000] z-[1000] xs:top-[-190px] top-32 xs:px-20 px-10">
+        <div className="formContainer  xs:z-[1000] z-[1000] xs:top-[-190px]  top-32 xs:px-20 px-10">
           <motion.div
-            className="phoneSvg mt-0"
+            className="phoneSvg mt-0 "
             initial={{ opacity: 1 }}
             whileInView={{ opacity: 0 }}
             transition={{ delay: 2, duration: 1 }}

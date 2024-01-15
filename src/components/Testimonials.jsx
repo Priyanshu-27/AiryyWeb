@@ -152,12 +152,12 @@ const Testimonials = () => {
 
   return (
     <>
-      <div id='Testimonials' className="Testimonials   snap-center xs:snap-start snap-mandatory flex flex-row  xs:flex-col justify-between items-center px-40   xs:px-0  xs:py-10 ">
-        <div className="relative  -top-20 left-60 right-0  xs:-top-10 xs:-left-[10rem]    -z-9 h-[400px] xs:h-[330px] w-full">
+      <div id='Testimonials' className="Testimonials h-screen  snap-center xs:snap-start snap-mandatory flex flex-row  xs:flex-col justify-between items-center px-40 pt-40  xs:px-0   xs:py-[4.5rem] ">
+        <div className="relative  -top-[15rem] left-60 right-0  xs:-top-16 xs:-left-[10rem]   -z-9 h-[370px] xs:h-[330px] w-full">
           <svg
-            className="absolute"
+            className="absolute "
             width="1132"
-            height="632"
+            height="832"
             viewBox="0 0 1422 832"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -181,6 +181,11 @@ const Testimonials = () => {
             </defs>
           </svg>
         </div>
+
+
+
+
+
 
         {/* text */}
         <div className="flex relative right-72  xs:right-2 xs:bottom-56 bottom-40 ">
