@@ -8,15 +8,16 @@ import Contact from "./components/Contact";
 import Bikes from "./components/Bikes";
 import Footer from "./components/Footer";
 import SmoothScroll from "smooth-scroll";
+import './App.css';
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
   speedAsDuration: true,
 });
-
 const App = () => {
 
   return (
     <div>
+     
       <Navbar />
       <Hero />
       <Services />
@@ -30,6 +31,23 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

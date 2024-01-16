@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { BsArrowUp } from "react-icons/bs";
 
@@ -6,15 +6,35 @@ const Theme = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isLightMode, setIsLightMode] = useState(true);
   const [isInitialRenderComplete, setIsInitialRenderComplete] = useState(false);
+  const scrollProgressRef = useRef(null);
+  const calcScrollValue = () => {
+    const scrollProgress = scrollProgressRef.current;
+    const pos = document.documentElement.scrollTop;
+    const calcHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrollValue = Math.round((pos * 100) / calcHeight);
 
+    if (pos > 100) {
+      scrollProgress.style.display = "grid";
+    } else {
+      scrollProgress.style.display = "none";
+    }
+
+    scrollProgress.style.background = `conic-gradient(#03cc65 ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
+  };
   const handleScroll = () => {
     setScrolling(window.scrollY > 150);
   };
 
   useEffect(() => {
+    window.onscroll = calcScrollValue;
+    window.onload = calcScrollValue;
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.onscroll = null;
     };
   }, []);
 
@@ -56,16 +76,25 @@ const Theme = () => {
     localStorage.removeItem("theme");
 
     // Apply the theme based on the operating system preference
-    const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isDarkMode = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     setIsLightMode(!isDarkMode);
     document.documentElement.classList.toggle("dark", !isDarkMode);
   };
 
   return (
     <>
-      <div className={`fixed z-[1001] ${scrolling ? "z-[10000000]" : ""} flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1 ${scrolling ? "md:py-5 " : "md:py-0 "} bg-transparent`}>
-        {isInitialRenderComplete && isLightMode !== undefined && ( // Check if the initial render is complete and isLightMode is defined
-          isLightMode ? (
+      <div
+        className={`fixed z-[1001] ${
+          scrolling ? "z-[10000000]" : ""
+        } flex justify-end items-center h-full cursor-pointer right-0 md:-mr-9 xl:-mr-1 ${
+          scrolling ? "md:py-5 " : "md:py-0 "
+        } bg-transparent`}
+      >
+        {isInitialRenderComplete &&
+          isLightMode !== undefined && // Check if the initial render is complete and isLightMode is defined
+          (isLightMode ? (
             <FaSun
               onClick={toggleTheme}
               style={{ height: "50px" }}
@@ -77,17 +106,26 @@ const Theme = () => {
               style={{ height: "50px" }}
               className={`xl:mx-5 text-black sm:mr-10`}
             />
-          )
-        )}
+          ))}
+        <a
+          onClick={() => {
+            scrollToSection("Nav");
+          }}
+          className={`fixed z-[1001] ${
+            scrolling ? "z-[10000000]" : ""
+          } text-white border bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10 ${
+            scrolling ? "md:py-5 " : "md:py-0 "
+          } bg-transparent`}
+        >
+          <BsArrowUp
+            onClick={() => scrollToSection("Nav")}
+            style={{ height: "50px" }}
+        
+            className={`xl:mx-5 font-bold text-white sm:mr-10 xs:mr-[1.2rem]`}
+          />
+          <span className="absolute inset-0 border-[4px]  border-black rounded-[50%]"></span>
+        </a>
       </div>
-      <a onClick={() => { scrollToSection('Nav') }} className={`fixed z-[1001] ${scrolling ? "z-[10000000]" : ""} text-white    flex justify-end items-end h-10 cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10 ${scrolling ? "md:py-5 " : "md:py-0 "} bg-transparent`}>
-        <BsArrowUp
-          onClick={() => scrollToSection('Nav')}
-          style={{ height: "50px" }}
-          className={`xl:mx-5 text-white sm:mr-10 xs:mr-10`}
-        />
-     
-      </a>
     </>
   );
 };

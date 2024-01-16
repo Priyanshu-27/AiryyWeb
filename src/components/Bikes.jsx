@@ -15,23 +15,23 @@ const Bikes = () => {
   const [isHoveredBox4 , setIsHoveredBox4] = useState(false) ;
   const [isHoveredBox5 , setIsHoveredBox5] = useState(false) ;
   return (
-    <div className="h-screen xs:py-[15px] xs:w-full bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start  xs:m-0 m-10 py-[15px]">
-      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px] m-auto rounded-2xl py-2">
+    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
+      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px]  rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
       <div
         id="Bikes"
-        className="grid xs:grid-cols-2  grid-cols-3 gap-20 xs:gap-10 xs:m-[15px] m-10 py-16 "
+        className="grid xs:grid-cols-2  xl:w-screen xl:ml-48 grid-cols-3 gap-20 xs:gap-10 xs:m-[5px]   py-16 "
       >
         <div
-          class="relative  border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
+          class="relative  bg-gradient-to-r from-yellow-500 to-yellow-300   border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox1(true)}
           onMouseLeave={() => setIsHoveredBox1(false)}
         >
           <img
             src={pin}
             alt="pin img"
-            className="absolute top-[-10px]  left-[-20px] h-[60px] w-[60px]"
+            className="absolute top-[-10px]   left-[-20px] h-[60px] w-[60px]"
           />
           {/* <div class="absolute w-[135.69px] h-[63.06px]  left-[-50.07px] top-[7.06px] rotate-[-37.07deg] bg-zinc-800"></div> */}
           {/* <div class="absolute w-[135.69px] h-[63.06px]  left-[152.62px] top-[150.83px] rotate-[139.15deg] bg-zinc-800"></div> */}
@@ -67,7 +67,7 @@ const Bikes = () => {
 
         {/* BOX 2 */}
         <div
-          class="relative   border xs:w-[150px] xs:h-[180px]  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative   border bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px]  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox2(true)}
           onMouseLeave={() => setIsHoveredBox2(false)}
         >
@@ -111,7 +111,7 @@ const Bikes = () => {
 
         {/* BOX 3 */}
         <div
-          class="relative  xs:w-[150px] xs:h-[180px]   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative     border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox3(true)}
           onMouseLeave={() => setIsHoveredBox3(false)}
         >
@@ -154,7 +154,7 @@ const Bikes = () => {
 
         {/* BOX 4 */}
         <div
-          class="relative   border xs:w-[150px] xs:h-[180px] border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          class="relative   border bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px] border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox4(true)}
           onMouseLeave={() => setIsHoveredBox4(false)}
         >
@@ -197,7 +197,7 @@ const Bikes = () => {
 
         {/* BOX 5 */}
         <div
-          class="relative  xs:w-[150px] xs:h-[180px]  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative bg-gradient-to-r from-yellow-500 to-yellow-300   xs:w-[150px] xs:h-[180px]  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox5(true)}
           onMouseLeave={() => setIsHoveredBox5(false)}
         >
@@ -241,7 +241,7 @@ const Bikes = () => {
 
         {/* BOX 6 */}
         <div
-          class="relative   xs:w-[150px] xs:h-[180px]    border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          class="relative bg-gradient-to-r from-yellow-500 to-yellow-300   xs:w-[150px] xs:h-[180px]    border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox5(true)}
           onMouseLeave={() => setIsHoveredBox5(false)}
         >
