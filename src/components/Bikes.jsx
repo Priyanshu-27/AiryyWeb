@@ -1,19 +1,19 @@
-import React , {useState} from 'react'
-import Img1 from  '../assets/bikeImg5.png'
-import Img2 from  '../assets/bikeImg4.png'
-import Img3 from  '../assets/bikeImg3.png'
-import Img4 from  '../assets/bikeImg2.png'
-import Img5 from  '../assets/bikeImg1.png'
-import pin from '../assets/Pin.png'
-import BG from '../assets/Bgforbikes.jpg'
+import React, { useState } from "react";
+import Img1 from "../assets/bikeImg5.png";
+import Img2 from "../assets/bikeImg4.png";
+import Img3 from "../assets/bikeImg3.png";
+import Img4 from "../assets/bikeImg2.png";
+import Img5 from "../assets/bikeImg1.png";
+import pin from "../assets/Pin.png";
+import BG from "../assets/Bgforbikes.jpg";
 // import { useState } from 'react'
 import Fade from "react-reveal/Fade";
 const Bikes = () => {
-  const [isHoveredBox1 , setIsHoveredBox1] = useState(false) ;
-  const [isHoveredBox2 , setIsHoveredBox2] = useState(false) ;
-  const [isHoveredBox3 , setIsHoveredBox3] = useState(false) ;
-  const [isHoveredBox4 , setIsHoveredBox4] = useState(false) ;
-  const [isHoveredBox5 , setIsHoveredBox5] = useState(false) ;
+  const [isHoveredBox1, setIsHoveredBox1] = useState(false);
+  const [isHoveredBox2, setIsHoveredBox2] = useState(false);
+  const [isHoveredBox3, setIsHoveredBox3] = useState(false);
+  const [isHoveredBox4, setIsHoveredBox4] = useState(false);
+  const [isHoveredBox5, setIsHoveredBox5] = useState(false);
   return (
     <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
       <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px]  rounded-2xl py-2">
@@ -111,7 +111,7 @@ const Bikes = () => {
 
         {/* BOX 3 */}
         <div
-          class="relative     border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative  bg-gradient-to-r from-yellow-500 to-yellow-300  xs:w-[150px] xs:h-[180px]   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox3(true)}
           onMouseLeave={() => setIsHoveredBox3(false)}
         >
@@ -284,6 +284,6 @@ const Bikes = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Bikes
+export default Bikes;
