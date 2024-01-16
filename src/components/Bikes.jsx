@@ -15,26 +15,23 @@ const Bikes = () => {
   const [isHoveredBox4 , setIsHoveredBox4] = useState(false) ;
   const [isHoveredBox5 , setIsHoveredBox5] = useState(false) ;
   return (
-    <div
-      className="h-screen  bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start m-10 py-16"
-      // style={{
-      //   backgroundImage:
-      //     'url("https://images.unsplash.com/photo-1591866605101-67aa6d498cce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
-      // }}
-    >
-      <h1 className="text-center font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px] m-auto rounded-2xl py-2">
+    <div className="h-screen xs:w-full bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start  xs:m-0 m-10 py-16">
+      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px] m-auto rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
-      <div id="Bikes" className="grid grid-cols-3 gap-20 m-10 py-16 ">
+      <div
+        id="Bikes"
+        className="grid xs:grid-cols-2  grid-cols-3 gap-20 xs:gap-10 xs:m-[15px] m-10 py-16 "
+      >
         <div
-          class="relative  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative  border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox1(true)}
           onMouseLeave={() => setIsHoveredBox1(false)}
         >
           <img
             src={pin}
             alt="pin img"
-            className="absolute top-[-10px] left-[-20px] h-[60px] w-[60px]"
+            className="absolute top-[-10px]  left-[-20px] h-[60px] w-[60px]"
           />
           {/* <div class="absolute w-[135.69px] h-[63.06px]  left-[-50.07px] top-[7.06px] rotate-[-37.07deg] bg-zinc-800"></div> */}
           {/* <div class="absolute w-[135.69px] h-[63.06px]  left-[152.62px] top-[150.83px] rotate-[139.15deg] bg-zinc-800"></div> */}
@@ -46,8 +43,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox1 ? (
               <Fade bottom>
-                <div className="absolute top-[-40px] left-[-70px]">
-                  <p className=" text-start w-[170px] text-black font-poppins font-semibold">
+                <div className="absolute top-[-40px] xs:left-[-100px] left-[-70px]">
+                  <p className=" text-start xs:text-[12px] xs:w-[120px] w-[170px] text-black font-poppins font-semibold">
                     "Our Electric Bikes boost a 50 km range, ideal for
                     economical short rides."
                   </p>
@@ -55,11 +52,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute xs:top-[-60px]  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img1}
                   alt="Placeholder Image 2"
                 />
@@ -70,7 +67,7 @@ const Bikes = () => {
 
         {/* BOX 2 */}
         <div
-          class="relative   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative   border xs:w-[150px] xs:h-[180px]  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox2(true)}
           onMouseLeave={() => setIsHoveredBox2(false)}
         >
@@ -90,8 +87,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox2 ? (
               <Fade bottom>
-                <div className="absolute top-[-60px] left-[-70px]">
-                  <p className=" text-start w-[170px] text-black font-poppins font-semibold">
+                <div className="absolute top-[-60px] xs:left-[-100px] left-[-70px]">
+                  <p className=" text-start xs:w-[120px] w-[170px] xs:text-[12px] text-black font-poppins font-semibold">
                     "Both Electric Bikes and Activa are new, serviced, and
                     feature advanced safety for a secure riding experience."
                   </p>
@@ -99,11 +96,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute top-[-40px]  xs:left-[-80px]  left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img2}
                   alt="Placeholder Image 2"
                 />
@@ -114,7 +111,7 @@ const Bikes = () => {
 
         {/* BOX 3 */}
         <div
-          class="relative     border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative  xs:w-[150px] xs:h-[180px]   border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox3(true)}
           onMouseLeave={() => setIsHoveredBox3(false)}
         >
@@ -133,8 +130,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox3 ? (
               <Fade bottom>
-                <div className="absolute top-[-40px] left-[-70px]">
-                  <p className=" text-start w-[170px] text-black font-poppins font-semibold">
+                <div className="absolute top-[-40px] xs:left-[-105px] left-[-70px]">
+                  <p className=" text-start xs:w-[140px] w-[170px] xs:text-[12px]  text-black font-poppins font-semibold">
                     "Enjoy environmentally friendly rides, reducing emissions
                     with our Electric Bikes."
                   </p>
@@ -142,11 +139,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img3}
                   alt="Placeholder Image 2"
                 />
@@ -157,7 +154,7 @@ const Bikes = () => {
 
         {/* BOX 4 */}
         <div
-          class="relative   border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          class="relative   border xs:w-[150px] xs:h-[180px] border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox4(true)}
           onMouseLeave={() => setIsHoveredBox4(false)}
         >
@@ -176,8 +173,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox4 ? (
               <Fade bottom>
-                <div className="absolute top-[-60px] left-[-70px]">
-                  <p className="text-start w-[195px] text-black font-poppins font-semibold">
+                <div className="absolute top-[-60px] xs:left-[-110px] left-[-70px]">
+                  <p className="text-start xs:text-[12px] xs:w-[140px] w-[195px] text-black font-poppins font-semibold">
                     "Our fleet, including Activa, is new, meticulously
                     serviced,and promises a fresh and comfortable ride."
                   </p>
@@ -185,11 +182,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img4}
                   alt="Placeholder Image 2"
                 />
@@ -200,7 +197,7 @@ const Bikes = () => {
 
         {/* BOX 5 */}
         <div
-          class="relative    border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
+          class="relative  xs:w-[150px] xs:h-[180px]  border  border-black shadow-2xl rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox5(true)}
           onMouseLeave={() => setIsHoveredBox5(false)}
         >
@@ -219,8 +216,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox5 ? (
               <Fade bottom>
-                <div className="absolute top-[-60px] left-[-80px]">
-                  <p className=" text-start w-[210px] text-black font-poppins font-semibold">
+                <div className="absolute top-[-60px] xs:left-[-105px] left-[-80px]">
+                  <p className=" text-start xs:text-[12px] xs:w-[140px] w-[210px] text-black font-poppins font-semibold">
                     Choose between the silent efficiency of Electric Bikes or
                     the versatile reliability of Activa, meeting diverse rider
                     preferences.
@@ -229,11 +226,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img5}
                   alt="Placeholder Image 2"
                 />
@@ -244,7 +241,7 @@ const Bikes = () => {
 
         {/* BOX 6 */}
         <div
-          class="relative       border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
+          class="relative   xs:w-[150px] xs:h-[180px]    border  border-black shadow-2xl  rounded-2xl w-[251px] h-[209px]"
           onMouseEnter={() => setIsHoveredBox5(true)}
           onMouseLeave={() => setIsHoveredBox5(false)}
         >
@@ -263,8 +260,8 @@ const Bikes = () => {
           /> */}
             {isHoveredBox5 ? (
               <Fade bottom>
-                <div className="absolute top-[-40px] left-[-70px]">
-                  <p className=" text-start w-[170px] text-black font-poppins font-bold">
+                <div className="absolute top-[-40px] xs:left-[-100px] left-[-70px]">
+                  <p className=" text-start xs:text-[12px] xs:w-[110px] w-[170px] text-black font-poppins font-bold">
                     Our Electric Bikes boast a 50 km range, ideal for economical
                     short rides .
                   </p>
@@ -272,11 +269,11 @@ const Bikes = () => {
               </Fade>
             ) : (
               <div>
-                <p className="xxl:hidden xl:hidden  absolute top-[-90px] left-[-0px]">
+                <p className="xxl:hidden xl:hidden xs:left-[-60px]  absolute top-[-90px] left-[-0px]">
                   Click me
                 </p>
                 <img
-                  className="absolute top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                  className="absolute  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
                   src={Img5}
                   alt="Placeholder Image 2"
                 />
