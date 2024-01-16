@@ -5,8 +5,9 @@ import Img3 from "../assets/bikeImg3.png";
 import Img4 from "../assets/bikeImg2.png";
 import Img5 from "../assets/bikeImg1.png";
 import pin from "../assets/Pin.png";
+import earth from "../assets/earth.png"
 import BG from "../assets/Bgforbikes.jpg";
-// import { useState } from 'react'
+// import { useState } from 'rea
 import Fade from "react-reveal/Fade";
 const Bikes = () => {
   const [isHoveredBox1, setIsHoveredBox1] = useState(false);
@@ -15,8 +16,8 @@ const Bikes = () => {
   const [isHoveredBox4, setIsHoveredBox4] = useState(false);
   const [isHoveredBox5, setIsHoveredBox5] = useState(false);
   return (
-    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-r from-yellow-500 to-yellow-300  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
-      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-black bg-yellow-400 w-[600px]  rounded-2xl py-2">
+    <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-t from-black via-yellow-400 to-black  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
+      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-yellow-400 bg-black w-[600px]  rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
       <div
@@ -51,16 +52,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute xs:top-[-60px]  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img1}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+             
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                   <Fade bottom>
+                  <img
+                    className="absolute xs:top-[-60px]  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={Img1}
+                    alt="Placeholder Image 2"
+                  />
+                   </Fade>
+                </div>
+             
             )}
           </div>
         </div>
@@ -95,16 +100,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute top-[-40px]  xs:left-[-80px]  left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img2}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+             
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                   <Fade bottom>
+                  <img
+                    className="absolute top-[-40px]  xs:left-[-80px]  left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={Img2}
+                    alt="Placeholder Image 2"
+                  />
+                    </Fade>
+                </div>
+            
             )}
           </div>
         </div>
@@ -138,16 +147,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img3}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+             
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                   <Fade bottom>
+                  <img
+                    className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={earth}
+                    alt="Placeholder Image 2"
+                  />
+                    </Fade>
+                </div>
+            
             )}
           </div>
         </div>
@@ -181,16 +194,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img4}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+            
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                    <Fade bottom>
+                  <img
+                    className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={Img4}
+                    alt="Placeholder Image 2"
+                  />
+                      </Fade>
+                </div>
+          
             )}
           </div>
         </div>
@@ -225,16 +242,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img5}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+             
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px] absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                   <Fade bottom>
+                  <img
+                    className="absolute top-[-40px] xs:left-[-80px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={Img5}
+                    alt="Placeholder Image 2"
+                  />
+                    </Fade>
+                </div>
+            
             )}
           </div>
         </div>
@@ -268,16 +289,20 @@ const Bikes = () => {
                 </div>
               </Fade>
             ) : (
-              <div>
-                <p className="xxl:hidden xl:hidden xs:left-[-60px]  absolute top-[-90px] left-[-0px]">
-                  Click me
-                </p>
-                <img
-                  className="absolute  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
-                  src={Img5}
-                  alt="Placeholder Image 2"
-                />
-              </div>
+             
+                <div>
+                  <p className="xxl:hidden xl:hidden xs:left-[-60px]  absolute top-[-90px] left-[-0px]">
+                    Click me
+                  </p>
+                   <Fade bottom>
+                  <img
+                    className="absolute  xs:left-[-80px] top-[-40px] left-[-20px] right-[30px] w-[70px] h-[70px]"
+                    src={Img5}
+                    alt="Placeholder Image 2"
+                  />
+                   </Fade>
+                </div>
+             
             )}
           </div>
         </div>
