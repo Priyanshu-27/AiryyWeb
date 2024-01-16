@@ -3,8 +3,11 @@ import { CiFacebook } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
 import Logo from "../assets/airyyLogo.png";
-const currentYear = new Date().getFullYear();
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import CallIcon from "@mui/icons-material/Call";
+import Slide from "react-reveal/Slide";const currentYear = new Date().getFullYear();
 const Navbar = () => {
+  const[isDropDown , setIsDropDown] = useState(false)
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -145,7 +148,7 @@ const Navbar = () => {
               </div>
             ) : null}
           </div>
-          <div className="mx-auto hidden h-[58px] w-full items-center justify-between transition duration-500 ease-in-out md:flex">
+          <div className="mx-auto hidden   h-[98px] w-full items-center justify-between transition duration-500 ease-in-out md:flex">
             <div className="flex lg:w-[225px]">
               <span
                 data-state="closed"
@@ -209,10 +212,13 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-            <div class="flex gap-4">
+            <div class="relative">
               <a
                 class="outline-none  cursor-pointer focus-visible:ring-slate-7 text-sm h-10 pl-4 pr-2 gap-0 font-semibold bg-white text-black hover:bg-white/90 focus-visible:ring-4 focus-visible:ring-white/30 focus-visible:outline-none focus-visible:bg-white/90 disabled:hover:bg-white inline-flex items-center border justify-center select-none rounded-full disabled:cursor-not-allowed disabled:opacity-70 transition ease-in-out duration-200"
                 data-state="closed"
+                onClick={() => {
+                  setIsDropDown(!isDropDown);
+                }}
               >
                 Contact Now
                 <span class="text-[#70757E]">
@@ -233,6 +239,31 @@ const Navbar = () => {
                   </svg>
                 </span>
               </a>
+              {isDropDown && (
+                <Slide right>
+                  <div className="absolute top-full  mt-2 bg-white rounded-xl w-[150px] shadow-xl py-4 px-[15px]">
+                    <ul className="flex flex-col">
+                      <li
+                        className="text-black mb-4 hover:underline cursor-pointer"
+                        onClick={{ handleRentNowClick }}
+                      >
+                        <WhatsAppIcon
+                          className="text-green-700 font-bold text-[20px] mr-4"
+                          fontSize="0"
+                        />
+                        WhatsApp
+                      </li>
+                      <li className="text-black hover:underline cursor-pointer">
+                        <CallIcon
+                          className="text-blue-700 font-bold text-[20px] mr-4"
+                          fontSize="0"
+                        />
+                        Direct Call
+                      </li>
+                    </ul>
+                  </div>
+                </Slide>
+              )}
             </div>
           </div>
         </div>

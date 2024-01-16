@@ -36,7 +36,10 @@ const Services = () => {
                   embark on your adventure day or night.
                 </div>
                 <div className="px-2 py-2 bg-black rounded-md xs:py-1 xs:mt-3 mt-8 border border-slate-50 justify-start items-start gap-2 inline-flex group-hover:bg-white transition-all duration-300">
-                  <a  onClick={{handleRentNowClick}} className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]">
+                  <a
+                    onClick={{ handleRentNowClick }}
+                    className="text-white cursor-pointer  group-hover:text-black font-poppins  text-base font-semibold leading-[18px] xs:text-[10px]"
+                  >
                     Get Started Today
                   </a>
                 </div>
@@ -106,9 +109,7 @@ const Services = () => {
                 ensuring you enjoy the thrill of riding without straining your
                 finances.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px]  justify-start items-start gap-2 inline-flex">
-               
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px]  justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
 
@@ -117,7 +118,6 @@ const Services = () => {
             <svg
               width="210"
               height="297"
-           
               viewBox="0 0 210 297"
               version="1.1"
               id="svg1"
@@ -174,9 +174,7 @@ const Services = () => {
                 Prioritizing safety, our bikes undergo regular maintenance to
                 guarantee a secure and worry-free riding experience.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex">
-               
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px] justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
 
@@ -206,9 +204,7 @@ const Services = () => {
                 Easy Booking: Hassle-free online and offline booking with
                 flexible rental options.
               </div>
-              <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex">
-               
-              </div>
+              <div className="px-4 py-2.5 rounded-[10px]justify-start items-start gap-2 inline-flex"></div>
             </div>
           </div>
         </div>
