@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { BsArrowUp } from "react-icons/bs";
 
@@ -28,7 +28,6 @@ const Theme = () => {
   };
 
   useEffect(() => {
-
     window.onscroll = calcScrollValue;
     window.onload = calcScrollValue;
 
@@ -108,8 +107,25 @@ const Theme = () => {
               className={`xl:mx-5 text-black sm:mr-10`}
             />
           ))}
+        <a
+          onClick={() => {
+            scrollToSection("Nav");
+          }}
+          className={`fixed z-[1001] ${
+            scrolling ? "z-[10000000]" : ""
+          } text-white border bg-yellow-500 rounded-[50%]  flex justify-end items-end h-[3.4rem] w-[3.4rem] cursor-pointer right-0 bottom-10 md:-mr-9 xl:mr-10 ${
+            scrolling ? "md:py-5 " : "md:py-0 "
+          } bg-transparent`}
+        >
+          <BsArrowUp
+            onClick={() => scrollToSection("Nav")}
+            style={{ height: "50px" }}
+        
+            className={`xl:mx-5 font-bold text-white sm:mr-10 xs:mr-[1.2rem]`}
+          />
+          <span className="absolute inset-0 border-[4px]  border-black rounded-[50%]"></span>
+        </a>
       </div>
-     
     </>
   );
 };
