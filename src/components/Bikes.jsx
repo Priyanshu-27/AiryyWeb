@@ -17,12 +17,12 @@ const Bikes = () => {
   const [isHoveredBox5, setIsHoveredBox5] = useState(false);
   return (
     <div className="h-screen xs:py-[15px] xs:w-full  bg-gradient-to-t from-black via-yellow-400 to-black  rounded-3xl bg-center snap-center xs:snap-start items-center justify-center flex flex-col  xs:m-0 m-10 py-[15px]">
-      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-yellow-400 bg-black w-[600px]  rounded-2xl py-2">
+      <h1 className="text-center  xs:w-[300px] xs:text-[18px] font-poppins text-[30px] font-bold text-white w-[600px]  rounded-2xl py-2">
         The Benefits of Riding with Us
       </h1>
       <div
         id="Bikes"
-        className="grid xs:grid-cols-2  xl:w-screen xl:ml-48 grid-cols-3 gap-20 xs:gap-10 xs:m-[5px]   py-16 "
+        className="grid xs:grid-cols-2  xl:w-screen xl:ml-48 grid-cols-3 gap-20 xs:gap-10 xs:m-[5px]   py-16"
       >
         <div
           class="relative  bg-gradient-to-r from-yellow-500 to-yellow-300   border  border-black shadow-2xl rounded-2xl xs:w-[150px] xs:h-[180px] w-[251px] h-[209px]"
